@@ -1,0 +1,143 @@
+.jadoo__navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+}
+
+/* Logo */
+.jadoo__navbar-logo {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.jadoo__navbar-logo img {
+  width: 115px;
+  height: 34px;
+}
+
+/* Links */
+.jadoo__navbar-links {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.jadoo__navbar-links p,
+.jadoo__navbar-menu__container-links p {
+  font-family: var(--font-base);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: var(--color-navbar);
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+/* Sign */
+.jadoo__navbar-sign {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.jadoo__navbar-sign p,
+.jadoo__navbar-menu__container-sign p {
+  white-space: nowrap;
+  font-family: var(--font-base);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+  color: var(--color-navbar);
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+.jadoo__navbar-sign button {
+  border: 1px solid #212832;
+  border-radius: 5px;
+  background: transparent;
+  white-space: nowrap;
+  font-family: var(--font-base);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+  color: var(--color-navbar);
+  padding: 0.5rem 1.5rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.jadoo__navbar-sign svg {
+  font-size: 12px;
+}
+
+/* Menu */
+.jadoo__navbar-menu {
+  position: relative;
+  display: none;
+}
+
+.jadoo__navbar-menu__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: end;
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  min-width: 210px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.jadoo__navbar-menu__container p {
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .jadoo__navbar-links {
+    display: none;
+  }
+
+  .jadoo__navbar-menu__container-sign {
+    display: none;
+  }
+
+  .jadoo__navbar-menu {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .jadoo__navbar {
+    padding: 2rem 4rem;
+  }
+
+  .jadoo__navbar-sign {
+    display: none;
+  }
+
+  .jadoo__navbar-menu__container-sign {
+    display: block;
+  }
+
+  .jadoo__navbar-menu__container-sign svg {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .jadoo__navbar {
+    padding: 2rem;
+  }
+}
