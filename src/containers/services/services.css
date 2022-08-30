@@ -1,0 +1,64 @@
+.jadoo__services {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Heading */
+.jadoo__services-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.jadoo__services-heading p {
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.jadoo__services-heading h1 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 64px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-title);
+  margin-bottom: 4rem;
+}
+
+/* Container */
+.jadoo__services-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+}
+
+@media screen and (max-width: 1100px) {
+  .jadoo__services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .jadoo__services-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .jadoo__services-heading h1 {
+    font-size: 44px;
+    line-height: 54px;
+  }
+
+  .jadoo__services-heading p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
