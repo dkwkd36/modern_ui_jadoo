@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import { Navbar } from "./components";
+import { Navbar, Brand } from "./components";
 import { Header, Services, Destination, Book, Testimonial } from "./containers";
 
 const App = () => {
@@ -13,6 +13,7 @@ const App = () => {
       <Destination />
       <Book />
       <Testimonial />
+      <Brand />
     </div>
   );
 };

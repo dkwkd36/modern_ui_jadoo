@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./testimonial.css";
 import testimonial from "../../assets/testimonial.png";
 import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 
 const Testimonial = () => {
   const [position, setPosition] = useState(0);
-
+  const imageRef = useRef(null);
   const upArrow = () => {
-    if (position > -800) {
-      setPosition(position - 400);
+    if (position < 0) {
+      setPosition(position + imageRef.current.height);
     }
   };
   const downArrow = () => {
-    if (position < 0) {
-      setPosition(position + 400);
+    if (position > -(imageRef.current.height * 2)) {
+      setPosition(position - imageRef.current.height);
     }
   };
 
@@ -29,7 +29,7 @@ const Testimonial = () => {
           style={{ top: `${position}px` }}
         >
           <div className="jadoo__testimonial-card">
-            <img src={testimonial} alt="testimonial" />
+            <img src={testimonial} alt="testimonial" ref={imageRef} />
           </div>
           <div className="jadoo__testimonial-card">
             <img src={testimonial} alt="testimonial" />
@@ -41,13 +41,13 @@ const Testimonial = () => {
         <div className="jadoo__testimonial-sidebar">
           <BsChevronUp
             onClick={upArrow}
-            style={
-              position === -800 ? { color: "#BCB7C2" } : { color: "#3E2E4D" }
-            }
+            style={position === 0 ? { color: "#BCB7C2" } : { color: "#3E2E4D" }}
           />
           <BsChevronDown
             onClick={downArrow}
-            style={position === 0 ? { color: "#BCB7C2" } : { color: "#3E2E4D" }}
+            style={
+              position === -800 ? { color: "#BCB7C2" } : { color: "#3E2E4D" }
+            }
           />
         </div>
       </div>

@@ -72,3 +72,22 @@
     line-height: 54px;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .jadoo__testimonial-container {
+    height: 200px;
+  }
+
+  .jadoo__testimonial-slide img {
+    height: 200px;
+  }
+
+  .jadoo__testimonial-sidebar {
+    top: 5px;
+  }
+
+  .jadoo__testimonial-sidebar svg {
+    margin-top: 2rem;
+    font-size: 14px;
+  }
+}
