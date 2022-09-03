@@ -2,7 +2,14 @@ import React from "react";
 import "./App.css";
 
 import { Navbar, Brand, CTA } from "./components";
-import { Header, Services, Destination, Book, Testimonial } from "./containers";
+import {
+  Header,
+  Services,
+  Destination,
+  Book,
+  Testimonial,
+  Footer,
+} from "./containers";
 
 const App = () => {
   return (
@@ -15,6 +22,7 @@ const App = () => {
       <Testimonial />
       <Brand />
       <CTA />
+      <Footer />
     </div>
   );
 };
